@@ -36,3 +36,19 @@ behaviourSubject.subscribe { (event) in
     print(event)
 }
 behaviourSubject.onNext("issue 1")
+
+//MARK: Replay Subject
+print("\n## Replay Subjects ##")
+let replaySubject = ReplaySubject<String>.create(bufferSize: 2)
+replaySubject.onNext("issue 1")
+replaySubject.onNext("issue 2")
+replaySubject.onNext("issue 3")
+replaySubject.subscribe { (event) in
+    print(event)
+}
+replaySubject.onNext("issue 4")
+replaySubject.onNext("issue 5")
+replaySubject.onNext("issue 6")
+replaySubject.subscribe { (event) in
+    print(event)
+}
