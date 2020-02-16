@@ -6,7 +6,6 @@ target 'PhotoFilterRxSwift' do
   use_frameworks!
 
   # Pods for PhotoFilterRxSwift
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', '~> 4.0'
 
 end

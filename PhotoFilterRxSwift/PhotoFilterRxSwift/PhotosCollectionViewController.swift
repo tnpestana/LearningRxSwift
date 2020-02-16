@@ -15,7 +15,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        populatePhotos()
     }
     
     private func populatePhotos() {
@@ -27,10 +27,39 @@ class PhotosCollectionViewController: UICollectionViewController {
                     self?.images.append(object)
                 }
                 self?.images.reverse()
-                self?.collectionView.reloadData()
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
             default:
                 break
             }
         }
     }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.images.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        let asset = images[indexPath.row]
+        let manager = PHImageManager.default()
+        manager.requestImage(for: asset, targetSize: cell.imgPhoto.frame.size, contentMode: .aspectFit, options: nil) { (image, error) in
+            DispatchQueue.main.async {
+                cell.imgPhoto.image = image
+            }
+        }
+        return cell
+    }
+}
+
+class PhotoCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var imgPhoto: UIImageView!
+    static var reuseIdentifier = "PhotoCollectionViewCell"
 }
