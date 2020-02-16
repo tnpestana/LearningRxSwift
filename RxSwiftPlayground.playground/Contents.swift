@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 let disposeBag = DisposeBag()
 
@@ -29,13 +30,13 @@ publishSubject.onCompleted()
 publishSubject.onNext("issue 4")
 
 //MARK: Behaviour Subject
-print("\n## Behaviour Subjects ##")
-let behaviourSubject = BehaviorSubject(value: "Init value")
-behaviourSubject.onNext("last value")
-behaviourSubject.subscribe { (event) in
+print("\n## Behavior Subjects ##")
+let behaviorSubject = BehaviorSubject(value: "Init value")
+behaviorSubject.onNext("last value")
+behaviorSubject.subscribe { (event) in
     print(event)
 }
-behaviourSubject.onNext("issue 1")
+behaviorSubject.onNext("issue 1")
 
 //MARK: Replay Subject
 print("\n## Replay Subjects ##")
@@ -52,3 +53,12 @@ replaySubject.onNext("issue 6")
 replaySubject.subscribe { (event) in
     print(event)
 }
+
+//MARK: Behavior Relay
+print("\n## Behavior Relay ##")
+let behaviourRelay = BehaviorRelay(value: ["init value"])
+behaviourRelay.asObservable().subscribe {
+    print($0)
+}
+behaviourRelay.accept(["item 1"])
+behaviourRelay.accept(behaviourRelay.value + ["item 2"])
