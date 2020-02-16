@@ -22,6 +22,9 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1O-NF-MjY">
                                 <rect key="frame" x="168" y="808" width="78" height="30"/>
                                 <state key="normal" title="Apply Filter"/>
+                                <connections>
+                                    <action selector="btnApplyFilterTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="yjD-F6-tfy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -43,6 +46,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnApplyFiler" destination="D1O-NF-MjY" id="EXx-wf-7Z8"/>
                         <outlet property="imgPhoto" destination="CU1-vu-Sei" id="bGY-B3-wkm"/>
                     </connections>
                 </viewController>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53B4EC81D1FDBBDABB2AB04A /* Pods_PhotoFilterRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC796230665F85D379CC624 /* Pods_PhotoFilterRxSwift.framework */; };
+		596C332C23F9EA18003D919C /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C332B23F9EA18003D919C /* FilterService.swift */; };
 		598D00A723F9D3B9002F1A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D00A623F9D3B9002F1A07 /* AppDelegate.swift */; };
 		598D00A923F9D3B9002F1A07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D00A823F9D3B9002F1A07 /* SceneDelegate.swift */; };
 		598D00AB23F9D3B9002F1A07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D00AA23F9D3B9002F1A07 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		0027012B45F8722FBB6E6C7D /* Pods-PhotoFilterRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoFilterRxSwift.release.xcconfig"; path = "Target Support Files/Pods-PhotoFilterRxSwift/Pods-PhotoFilterRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		4BC796230665F85D379CC624 /* Pods_PhotoFilterRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoFilterRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		596C332B23F9EA18003D919C /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		598D00A323F9D3B9002F1A07 /* PhotoFilterRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFilterRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598D00A623F9D3B9002F1A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598D00A823F9D3B9002F1A07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				598D00A823F9D3B9002F1A07 /* SceneDelegate.swift */,
 				598D00AA23F9D3B9002F1A07 /* ViewController.swift */,
 				59E5CF8423F9D65A00870162 /* PhotosCollectionViewController.swift */,
+				596C332B23F9EA18003D919C /* FilterService.swift */,
 			);
 			path = PhotoFilterRxSwift;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				598D00AB23F9D3B9002F1A07 /* ViewController.swift in Sources */,
+				596C332C23F9EA18003D919C /* FilterService.swift in Sources */,
 				598D00A723F9D3B9002F1A07 /* AppDelegate.swift in Sources */,
 				598D00A923F9D3B9002F1A07 /* SceneDelegate.swift in Sources */,
 				59E5CF8523F9D65A00870162 /* PhotosCollectionViewController.swift in Sources */,

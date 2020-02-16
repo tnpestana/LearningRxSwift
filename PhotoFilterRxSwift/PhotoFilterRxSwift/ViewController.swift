@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 class ViewController: UIViewController {
-    
+    @IBOutlet weak var btnApplyFiler: UIButton!
     @IBOutlet weak var imgPhoto: UIImageView!
     let disposeBag = DisposeBag()
     
@@ -28,8 +28,26 @@ class ViewController: UIViewController {
         }
         
         photosCVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
-            self?.imgPhoto.image = photo
+            DispatchQueue.main.async {
+                self?.updateUI(with: photo)
+            }
         }).disposed(by: disposeBag)
+    }
+    
+    private func updateUI(with photo: UIImage) {
+        imgPhoto.image = photo
+        btnApplyFiler.isHidden = false
+    }
+    
+    @IBAction func btnApplyFilterTapped() {
+        guard let sourceImg = self.imgPhoto.image else {
+            return
+        }
+        FilterService().applyFilter(to: sourceImg) { (outputImg) in
+            DispatchQueue.main.async {
+                self.imgPhoto.image = outputImg
+            }
+        }
     }
 }
 
