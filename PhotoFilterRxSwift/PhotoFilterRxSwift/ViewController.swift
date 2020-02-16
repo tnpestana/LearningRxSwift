@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         guard let sourceImg = self.imgPhoto.image else {
             return
         }
-        FilterService().applyFilter(to: sourceImg).subscribe(onNext: { outputImg in
+        FilterService.applyFilter(to: sourceImg).subscribe(onNext: { outputImg in
             DispatchQueue.main.async {
                 self.imgPhoto.image = outputImg
             }

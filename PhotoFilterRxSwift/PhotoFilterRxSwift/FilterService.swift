@@ -12,18 +12,9 @@ import CoreImage
 import RxSwift
 
 class FilterService {
-    private var context = CIContext()
+    private static var context = CIContext()
     
-    func applyFilter(to inputImg: UIImage) -> Observable<UIImage> {
-        return Observable<UIImage>.create { (observer) in
-            self.applyFilter(to: inputImg) { (outputImg) in
-                observer.onNext(outputImg)
-            }
-            return Disposables.create()
-        }
-    }
-    
-    func applyFilter(to inputImg: UIImage, completion: @escaping (UIImage) -> ()) {
+    private static func applyFilter(to inputImg: UIImage, completion: @escaping (UIImage) -> ()) {
         let filter = CIFilter(name: "CICMYKHalftone")!
         filter.setValue(5.0, forKey: kCIInputWidthKey)
         if let sourceImg = CIImage(image: inputImg) {
@@ -32,6 +23,15 @@ class FilterService {
                 let processedImg = UIImage(cgImage: cgImg, scale: inputImg.scale, orientation: inputImg.imageOrientation)
                 completion(processedImg)
             }
+        }
+    }
+    
+    static func applyFilter(to inputImg: UIImage) -> Observable<UIImage> {
+        return Observable<UIImage>.create { (observer) in
+            self.applyFilter(to: inputImg) { (outputImg) in
+                observer.onNext(outputImg)
+            }
+            return Disposables.create()
         }
     }
 }
