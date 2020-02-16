@@ -8,7 +8,22 @@
 
 import Foundation
 import UIKit
+import Photos
 
 class PhotosCollectionViewController: UICollectionViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
+    private func populatePhotos() {
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                break
+            default:
+                break
+            }
+        }
+    }
 }
