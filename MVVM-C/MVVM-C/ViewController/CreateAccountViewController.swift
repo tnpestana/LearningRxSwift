@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CreateAccountViewController.swift
 //  MVVM-C
 //
 //  Created by Tiago Pestana on 22/02/2020.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class CreateAccountViewController: UIViewController, Storyboarded {
+    var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-
