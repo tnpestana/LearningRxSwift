@@ -9,7 +9,7 @@
 import UIKit
 
 class BuyViewController: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
+    var coordinator: BuyCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()

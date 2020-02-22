@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
+    var coordinator: AppCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,7 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
+    var coordinator: CreateAccountCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
