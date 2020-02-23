@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="q3b-kD-068">
-                                <rect key="frame" x="20" y="64" width="374" height="72"/>
+                                <rect key="frame" x="20" y="64" width="374" height="115"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uya-j2-uX6">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -32,6 +32,13 @@
                                             <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ke-81-Ca5"/>
                                         </connections>
                                     </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-UK-FDS">
+                                        <rect key="frame" x="0.0" y="84" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -43,6 +50,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="segmentProduct" destination="SWf-UK-FDS" id="eX2-z1-oLU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,21 +66,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uji-UA-wZn">
-                                <rect key="frame" x="20" y="64" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-Sw-nYt">
+                                <rect key="frame" x="20" y="64" width="374" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uji-UA-wZn">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lbLSelectedPriduct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTp-Ta-Fmm">
+                                        <rect key="frame" x="0.0" y="32.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="uji-UA-wZn" firstAttribute="top" secondItem="kvk-OK-ReI" secondAttribute="top" constant="20" id="PyH-Bk-AZ3"/>
-                            <constraint firstItem="kvk-OK-ReI" firstAttribute="trailing" secondItem="uji-UA-wZn" secondAttribute="trailing" constant="20" id="d9l-JS-z0J"/>
-                            <constraint firstItem="uji-UA-wZn" firstAttribute="leading" secondItem="kvk-OK-ReI" secondAttribute="leading" constant="20" id="ebk-f1-2GF"/>
+                            <constraint firstItem="gAW-Sw-nYt" firstAttribute="top" secondItem="kvk-OK-ReI" secondAttribute="top" constant="20" id="4Dt-lI-d6N"/>
+                            <constraint firstItem="kvk-OK-ReI" firstAttribute="trailing" secondItem="gAW-Sw-nYt" secondAttribute="trailing" constant="20" id="DiL-OJ-5ek"/>
+                            <constraint firstItem="gAW-Sw-nYt" firstAttribute="leading" secondItem="kvk-OK-ReI" secondAttribute="leading" constant="20" id="cVY-wF-zUs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kvk-OK-ReI"/>
                     </view>
+                    <connections>
+                        <outlet property="lblSelectedProduct" destination="hTp-Ta-Fmm" id="jgw-a1-QfR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9I-91-DMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
