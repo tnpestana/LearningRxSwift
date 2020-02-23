@@ -9,19 +9,12 @@
 import Foundation
 import UIKit
 
-class AppCoordinator: NSObject, Coordinator {
-    var childCoordinators: [Coordinator]
-    var navigationController: UINavigationController
-    
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.childCoordinators = []
-    }
-    
-    func start() {
-        navigationController.delegate = self
-        let vc = ViewController.instantiate()
-        vc.coordinator = self
+class AppCoordinator: Coordinator {
+    override func start() {
+        let viewModel = HomeViewModel()
+        viewModel.coordinator = self
+        let vc = HomeViewController.instantiate()
+        vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: false)
     }
     
@@ -29,7 +22,7 @@ class AppCoordinator: NSObject, Coordinator {
         let child = BuyCoordinator(with: navigationController)
         child.parentCoordinator = self
         childCoordinators.append(child)
-        child.start(to: productType)
+        child.start(productType: productType)
     }
     
     func createAccount() {
@@ -39,30 +32,6 @@ class AppCoordinator: NSObject, Coordinator {
         child.start()
     }
     
-    func childDidFinish(_ child: Coordinator?) {
-        for (index, coordinator) in childCoordinators.enumerated() {
-            if coordinator === child {
-                childCoordinators.remove(at: index)
-                break
-            }
-        }
-    }
 }
 
-//MARK: Navigation Controller Delegate
-extension AppCoordinator: UINavigationControllerDelegate {
-    // Handle system back button taps within our coordinator
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
-            return
-        }
-        
-        if navigationController.viewControllers.contains(fromViewController) {
-            return
-        }
-        
-        if let buyViewController = fromViewController as? BuyViewController {
-            childDidFinish(buyViewController.coordinator)
-        }
-    }
-}
+

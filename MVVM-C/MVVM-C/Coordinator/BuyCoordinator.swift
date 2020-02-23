@@ -9,25 +9,21 @@
 import UIKit
 
 class BuyCoordinator: Coordinator {
-    weak var parentCoordinator: AppCoordinator?
-    var childCoordinators: [Coordinator]
-    var navigationController: UINavigationController
-    
-    init(with navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.childCoordinators = []
-    }
-    
-    func start() {
+    func start(productType: Int) {
+        let viewModel = BuyViewModel()
+        viewModel.product = productType
+        viewModel.coordinator = self
         let vc = BuyViewController.instantiate()
-        vc.coordinator = self
+        vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func start(to productType: Int) {
-        let vc = BuyViewController.instantiate()
-        vc.selectedProduct = productType
-        vc.coordinator = self
+    func goToPay(price: Int) {
+        let viewModel = PayViewModel()
+        viewModel.price = price
+        viewModel.coordinator = self
+        let vc = PayViewController.instantiate()
+        vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: false)
     }
 }

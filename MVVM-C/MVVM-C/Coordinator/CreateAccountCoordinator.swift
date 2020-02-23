@@ -9,22 +9,12 @@
 import UIKit
 
 class CreateAccountCoordinator: Coordinator {
-    weak var parentCoordinator: AppCoordinator?
-    var childCoordinators: [Coordinator]
-    var navigationController: UINavigationController
-    
-    init(with navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.childCoordinators = []
-    }
-    
-    func start() {
+    override func start() {
         let vc = CreateAccountViewController.instantiate()
-        vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func finish() {
-        parentCoordinator?.childDidFinish(self)
+    override func finish() {
+        parentCoordinator?.removeChild(self)
     }
 }

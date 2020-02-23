@@ -8,15 +8,19 @@
 
 import UIKit
 
-class BuyViewController: UIViewController, Storyboarded {
+class BuyViewController: UIViewController {
     @IBOutlet weak var lblSelectedProduct: UILabel!
+    var viewModel: BuyViewModel?
     
-    var coordinator: BuyCoordinator?
-    var selectedProduct = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        lblSelectedProduct.text = (selectedProduct == 0) ? "First" : "Second"
+        self.navigationItem.title = "Buy"
+        lblSelectedProduct.text = (viewModel?.product == 0) ? "First" : "Second"
+    }
+    
+    @IBAction func btnPayTapped(_ sender: Any) {
+        let price = (viewModel?.product ?? 0) * (viewModel?.quantity ?? 0)
+        viewModel?.coordinator?.goToPay(price: price)
     }
 }

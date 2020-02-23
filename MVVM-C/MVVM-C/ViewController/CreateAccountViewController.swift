@@ -8,12 +8,13 @@
 
 import UIKit
 
-class CreateAccountViewController: UIViewController, Storyboarded {
-    var coordinator: CreateAccountCoordinator?
+class CreateAccountViewController: UIViewController {
+    //var coordinator: CreateAccountCoordinator?
+    var viewModel: CreateAccountViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Create Account"
         // Do any additional setup after loading the view.
     }
 }

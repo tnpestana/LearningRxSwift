@@ -8,21 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController, Storyboarded {
+class HomeViewController: UIViewController {
     @IBOutlet weak var segmentProduct: UISegmentedControl!
-    var coordinator: AppCoordinator?
+    var viewModel: HomeViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Home"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func buyTapped(_ sender: Any) {
-        coordinator?.buySubscription(to: segmentProduct.selectedSegmentIndex)
+        viewModel?.coordinator?.buySubscription(to: segmentProduct.selectedSegmentIndex)
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {
-        coordinator?.createAccount()
+        viewModel?.coordinator?.createAccount()
     }
 }
 

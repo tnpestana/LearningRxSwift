@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5904C3542402D29300C518E7 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5904C3532402D29300C518E7 /* PayViewController.swift */; };
 		5924C55C2401879D003AF2B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924C55B2401879D003AF2B3 /* AppDelegate.swift */; };
 		5924C55E2401879D003AF2B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924C55D2401879D003AF2B3 /* SceneDelegate.swift */; };
-		5924C5602401879D003AF2B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924C55F2401879D003AF2B3 /* ViewController.swift */; };
+		5924C5602401879D003AF2B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924C55F2401879D003AF2B3 /* HomeViewController.swift */; };
 		5924C5632401879D003AF2B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5924C5612401879D003AF2B3 /* Main.storyboard */; };
 		5924C5652401879E003AF2B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5924C5642401879E003AF2B3 /* Assets.xcassets */; };
 		5924C5682401879E003AF2B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5924C5662401879E003AF2B3 /* LaunchScreen.storyboard */; };
@@ -20,13 +21,18 @@
 		596EEA1F2401B86B0069424B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596EEA1E2401B86B0069424B /* AppCoordinator.swift */; };
 		596EEA262401BA3A0069424B /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596EEA252401BA3A0069424B /* BuyViewController.swift */; };
 		596EEA282401BA470069424B /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596EEA272401BA470069424B /* CreateAccountViewController.swift */; };
+		59DFC0ED2402F89E00475743 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DFC0EC2402F89E00475743 /* HomeViewModel.swift */; };
+		59DFC0EF2402F8AE00475743 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DFC0EE2402F8AE00475743 /* CreateAccountViewModel.swift */; };
+		59DFC0F12402F8C700475743 /* BuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DFC0F02402F8C700475743 /* BuyViewModel.swift */; };
+		59DFC0F32402F8D100475743 /* PayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DFC0F22402F8D100475743 /* PayViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5904C3532402D29300C518E7 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		5924C5582401879D003AF2B3 /* MVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5924C55B2401879D003AF2B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5924C55D2401879D003AF2B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5924C55F2401879D003AF2B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5924C55F2401879D003AF2B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5924C5622401879D003AF2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5924C5642401879E003AF2B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5924C5672401879E003AF2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +44,10 @@
 		596EEA1E2401B86B0069424B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		596EEA252401BA3A0069424B /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		596EEA272401BA470069424B /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		59DFC0EC2402F89E00475743 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		59DFC0EE2402F8AE00475743 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		59DFC0F02402F8C700475743 /* BuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewModel.swift; sourceTree = "<group>"; };
+		59DFC0F22402F8D100475743 /* PayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,7 @@
 				596EEA232401B9E60069424B /* AppDelegate */,
 				596EEA242401B9F00069424B /* Storyboard */,
 				596EEA212401B9B30069424B /* Coordinator */,
+				59DFC0EB2402F87600475743 /* ViewModel */,
 				596EEA202401B9A00069424B /* ViewController */,
 				596EEA222401B9D40069424B /* Utilities */,
 			);
@@ -84,9 +95,10 @@
 		596EEA202401B9A00069424B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5924C55F2401879D003AF2B3 /* ViewController.swift */,
-				596EEA252401BA3A0069424B /* BuyViewController.swift */,
+				5924C55F2401879D003AF2B3 /* HomeViewController.swift */,
 				596EEA272401BA470069424B /* CreateAccountViewController.swift */,
+				596EEA252401BA3A0069424B /* BuyViewController.swift */,
+				5904C3532402D29300C518E7 /* PayViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -126,6 +138,17 @@
 				5924C5662401879E003AF2B3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		59DFC0EB2402F87600475743 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				59DFC0EC2402F89E00475743 /* HomeViewModel.swift */,
+				59DFC0EE2402F8AE00475743 /* CreateAccountViewModel.swift */,
+				59DFC0F02402F8C700475743 /* BuyViewModel.swift */,
+				59DFC0F22402F8D100475743 /* PayViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,14 +222,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DFC0F12402F8C700475743 /* BuyViewModel.swift in Sources */,
 				592924262401C235007451C0 /* BuyCoordinator.swift in Sources */,
 				596EEA1B2401B6AB0069424B /* Coordinator.swift in Sources */,
+				59DFC0F32402F8D100475743 /* PayViewModel.swift in Sources */,
 				596EEA1F2401B86B0069424B /* AppCoordinator.swift in Sources */,
-				5924C5602401879D003AF2B3 /* ViewController.swift in Sources */,
+				5924C5602401879D003AF2B3 /* HomeViewController.swift in Sources */,
 				596EEA1D2401B79C0069424B /* Storyboarded.swift in Sources */,
 				596EEA282401BA470069424B /* CreateAccountViewController.swift in Sources */,
 				592924282401C242007451C0 /* CreateAccountCoordinator.swift in Sources */,
+				59DFC0ED2402F89E00475743 /* HomeViewModel.swift in Sources */,
 				5924C55C2401879D003AF2B3 /* AppDelegate.swift in Sources */,
+				59DFC0EF2402F8AE00475743 /* CreateAccountViewModel.swift in Sources */,
+				5904C3542402D29300C518E7 /* PayViewController.swift in Sources */,
 				596EEA262401BA3A0069424B /* BuyViewController.swift in Sources */,
 				5924C55E2401879D003AF2B3 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -338,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -355,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QB7F9QKR9;
 				INFOPLIST_FILE = "MVVM-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QB7F9QKR9;
 				INFOPLIST_FILE = "MVVM-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var appCoordinator: AppCoordinator?
@@ -22,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appWindow.windowScene = windowScene
         
         let navController = UINavigationController()
-        appCoordinator = AppCoordinator(navigationController: navController)
+        appCoordinator = AppCoordinator(with: navController)
         appCoordinator?.start()
 
         appWindow.rootViewController = navController
