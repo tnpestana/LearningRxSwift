@@ -106,7 +106,6 @@
 		596EEA212401B9B30069424B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				596EEA1A2401B6AB0069424B /* Coordinator.swift */,
 				596EEA1E2401B86B0069424B /* AppCoordinator.swift */,
 				592924252401C235007451C0 /* BuyCoordinator.swift */,
 				592924272401C242007451C0 /* CreateAccountCoordinator.swift */,
@@ -117,6 +116,7 @@
 		596EEA222401B9D40069424B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				596EEA1A2401B6AB0069424B /* Coordinator.swift */,
 				596EEA1C2401B79C0069424B /* Storyboarded.swift */,
 			);
 			path = Utilities;

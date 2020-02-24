@@ -9,12 +9,13 @@
 import UIKit
 
 class PayViewController: UIViewController {
+    @IBOutlet weak var lblPrice: UILabel!
+    
     var viewModel: PayViewModel?
-    //var coordinator: BuyCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Pay"
-        // Do any additional setup after loading the view.
+        lblPrice.text = String(viewModel?.price ?? 0)
     }
 }

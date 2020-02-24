@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-Sw-nYt">
-                                <rect key="frame" x="20" y="64" width="374" height="62.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="108.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lbLSelectedPriduct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTp-Ta-Fmm">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -76,8 +76,24 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="c50-Wj-mbg">
+                                        <rect key="frame" x="0.0" y="32.5" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblQuantity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTB-LU-kE1">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5AM-9a-nve">
+                                                <rect key="frame" x="95" y="0.0" width="279" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLr-vj-DgS">
-                                        <rect key="frame" x="0.0" y="32.5" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="374" height="30"/>
                                         <state key="normal" title="Pay"/>
                                         <connections>
                                             <action selector="btnPayTapped:" destination="i9l-ry-gw9" eventType="touchUpInside" id="01T-DK-H80"/>
@@ -96,6 +112,7 @@
                     </view>
                     <connections>
                         <outlet property="lblSelectedProduct" destination="hTp-Ta-Fmm" id="jgw-a1-QfR"/>
+                        <outlet property="tfQuantity" destination="5AM-9a-nve" id="g5n-sr-DnY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9I-91-DMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,9 +126,36 @@
                     <view key="view" contentMode="scaleToFill" id="ayY-z1-6Wk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="igL-TS-LnS">
+                                <rect key="frame" x="20" y="64" width="374" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B3-0h-Hme">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblPrice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWe-fV-CjB">
+                                        <rect key="frame" x="0.0" y="32.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="igL-TS-LnS" firstAttribute="top" secondItem="ehd-i7-Y3A" secondAttribute="top" constant="20" id="3ZC-Qx-FWV"/>
+                            <constraint firstItem="ehd-i7-Y3A" firstAttribute="trailing" secondItem="igL-TS-LnS" secondAttribute="trailing" constant="20" id="b4c-zc-q7j"/>
+                            <constraint firstItem="igL-TS-LnS" firstAttribute="leading" secondItem="ehd-i7-Y3A" secondAttribute="leading" constant="20" id="q46-uJ-UiC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ehd-i7-Y3A"/>
                     </view>
+                    <connections>
+                        <outlet property="lblPrice" destination="iWe-fV-CjB" id="iea-rN-Myd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eu-PT-vfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

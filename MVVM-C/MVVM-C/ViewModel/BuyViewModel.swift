@@ -13,11 +13,9 @@ class BuyViewModel {
     var product : Int?
     var quantity: Int?
     
-//    var selectedProduct: Int? {
-//        return product
-//    }
-//
-//    var selectedQuantity: Int? {
-//        return quantity
-//    }
+    func goToPay() {
+        guard (quantity ?? 0) > 0 else { return }
+        let price = (product ?? 0) * (quantity ?? 0)
+        coordinator?.goToPay(price: price)
+    }
 }
